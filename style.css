@@ -65,6 +65,7 @@ body {
 .confirm-enquiry {
     max-height:170px;
     overflow-y: auto;
+    word-wrap: break-word;
 }
 
 .notification {

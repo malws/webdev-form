@@ -27,7 +27,10 @@ else {
                         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
                     )
                 );
-    $handle = $pdo->prepare("INSERT INTO submissions (Name, Email, Enquiry) VALUES ('".$customerName."','".$emailAddress."', '".$enquiry."')");
+    $handle = $pdo->prepare("INSERT INTO submissions (Name, Email, Enquiry) VALUES (:customerName, :email, :enquiry)");
+    $handle -> bindValue(':customerName', $customerName, PDO::PARAM_STR);
+    $handle -> bindValue(':email', $emailAddress, PDO::PARAM_STR);
+    $handle -> bindValue(':enquiry', $enquiry, PDO::PARAM_STR);
     $handle->execute();
 
     //Sending emails

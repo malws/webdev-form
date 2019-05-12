@@ -9,7 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.5.3/vue-router.min.js"></script>
 </head>
 <body>
-    <div id="app">        
+    <div id="app">   
+    <h1 class="title">Contact us</h1>     
         <transition name="page" mode="out-in" @after-enter="afterEnter">
             <router-view :anim-done="animDone" @anim-done="animDone = $event" :customer-name="customerName" @customer-name="customerName = $event" :email-address="emailAddress" @email-address="emailAddress = $event"  :enquiry="enquiry" @enquiry= "enquiry = $event" :response="response" @response= "response = $event"></router-view>     
         </transition>

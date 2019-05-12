@@ -10,7 +10,7 @@
 </head>
 <body>
     <div id="app">        
-        <transition name="page" @after-enter="afterEnter">
+        <transition name="page" mode="out-in" @after-enter="afterEnter">
             <router-view :anim-done="animDone" @anim-done="animDone = $event" :customer-name="customerName" @customer-name="customerName = $event" :email-address="emailAddress" @email-address="emailAddress = $event"  :enquiry="enquiry" @enquiry= "enquiry = $event" :response="response" @response= "response = $event"></router-view>     
         </transition>
     </div>    

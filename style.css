@@ -1,0 +1,170 @@
+* {
+    box-sizing:border-box;
+}
+body {
+    margin: 0;
+    background-color: lightgoldenrodyellow;
+}
+
+#app {
+    width:100%;
+    height:100vh;
+    background-color: lightgreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-enter-active, .page-leave-active {
+    transition: opacity 0.2s, transform 0.2s;
+}
+.page-enter, .page-leave-to {
+    opacity: 0;
+    transform: translateX(-30%);
+}
+
+.message-enter-active, .message-leave-active {
+    transition: opacity 0.2s, transform 0.2s;
+}
+.message-enter, .message-leave-to {
+    opacity: 0;
+    transform: translateX(-30%);
+}
+.notification-enter-active {
+    transition: all 0.7s ease;
+}
+.notification-enter {
+    transform: translate(0%, -200%);
+}
+
+#confirmation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 80%;
+    font-family: "Open Sans";
+}
+
+.confirm-data {
+    margin-bottom: 10px;
+    background-color: seagreen;
+    color: white;
+}
+
+.confirm-enquiry {
+    max-height:170px;
+    overflow-y: auto;
+}
+
+.notification {
+    position: absolute;
+    top:-100px;
+    width:100%;
+    padding: 10px;
+    background-color: lightcyan;
+    border-radius: 15px; 
+    line-height: 20px; 
+    margin-bottom: 30px;
+    font-family: "Open Sans";
+    font-size: 14px;
+    text-align: center;
+}
+
+.i {
+    border: solid 1px lightseagreen;
+    color: lightseagreen;
+    border-radius: 50%;
+    font-size: 12px;
+    padding:3px 10px; 
+    margin-right: 20px;
+    font-family: "Open Sans";
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+input, textarea, .confirm-data, .go-back {
+    border:none;
+    border-radius: 20px;  
+    padding:7px 20px;
+    font-family: "Open Sans";
+    font-size: 16px;
+    width:100%;
+}
+
+input, textarea { 
+    margin-bottom: 35px; 
+}
+
+input, .go-back {
+    height: 44px;
+}
+
+textarea {
+    resize: none;
+    height:150px;
+}
+
+.form-element {
+    display: block;
+    position: relative;
+    width:100%;
+    text-align: center;
+}
+.alert {
+    position: absolute;
+    top:-20px;
+    left:15px;
+    color: red;
+    font-family: "Open Sans";
+    font-size: 12px;
+}
+
+.error {
+    border: solid 1px red;
+}
+
+.submit-button, .go-back {
+    width: 100%;
+    height: 44px;
+    cursor: pointer;
+    font-family: "Open Sans";
+    font-size: 16px;
+    color: white;
+    background-color: brown;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width:610px) {
+    #app {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        width: 600px;
+        height: 600px;
+        border-radius: 50%;
+    }
+    input, textarea, .submit-button {
+        width:300px;
+    }
+    .alert {
+        left:110px;
+    }
+    #confirmation {
+        width:400px;
+    }
+    .notification {
+        top:-60px;
+        text-align: left;
+    }
+
+}
+

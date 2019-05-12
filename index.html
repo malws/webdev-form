@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<HTML>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <script src="js/vue.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="https://unpkg.com/http-vue-loader"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.5.3/vue-router.min.js"></script>
+</head>
+<body>
+    <div id="app">        
+        <transition name="page" @after-enter="afterEnter">
+            <router-view :anim-done="animDone" @anim-done="animDone = $event" :customer-name="customerName" @customer-name="customerName = $event" :email-address="emailAddress" @email-address="emailAddress = $event"  :enquiry="enquiry" @enquiry= "enquiry = $event" :response="response" @response= "response = $event"></router-view>     
+        </transition>
+    </div>    
+    <script src="js/script.js"></script>
+</body>
+</HTML>

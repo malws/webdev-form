@@ -49,8 +49,6 @@ else {
     mail($to, $subject, $message, $headers);
 }
 
-echo $result;
-
 //Data sanitizing function
 function sanitizeData($data)
 {
